@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/pas_redbrown"
+    android:background="@color/pas_redbrown"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_weight="3.5"
+            android:id="@+id/borrowingbook2_img"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/seraavt2" />
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_weight="6.5"
+            android:id="@+id/borrowingbook2_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:weightSum="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="30dp">
+                    <TextView
+                        android:id="@+id/borrowingbook2_txtname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/linottebold"
+                        android:text="Sera Seraphine"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/borrowingbook2_txtlibid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID thẻ: " />
+                    <TextView
+                        android:id="@+id/borrowingbook2_txtbookid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID sách: " />
+                    <TextView
+                        android:id="@+id/borrowingbook2_txtborrowdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày mượn: 27/10/2023" />
+                    <TextView
+                        android:id="@+id/borrowingbook2_txtduedate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày trả: 27/10/2023" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

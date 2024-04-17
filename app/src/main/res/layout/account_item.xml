@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="20dp"
+    android:layout_margin="10dp"
+    android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="20dp"
+    android:layout_height="wrap_content">
+  <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <CheckBox
+          android:layout_width="20dp"
+          android:layout_margin="10dp"
+          android:layout_gravity="end"
+          android:layout_height="20dp"
+          android:id="@+id/account_item_chkbox"
+          style="@style/CustomCheckbox02"/>
+      <de.hdodenhof.circleimageview.CircleImageView
+          app:civ_border_color="@color/pas_lowcream"
+          app:civ_border_width="2dp"
+          android:id="@+id/account_item_avatar"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:src="@drawable/seraavt2"
+          />
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+      <TextView
+          android:gravity="center"
+          android:id="@+id/account_item_username"
+          android:textSize="22sp"
+          android:fontFamily="@font/linottebold"
+          android:text="WAREHOUSE MANAGER"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+          <TextView
+              android:gravity="center"
+              android:id="@+id/account_item_role"
+              android:textColor="@color/low_grey"
+              android:textSize="16sp"
+              android:fontFamily="@font/linottebold"
+              android:text="Librarian"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+      </LinearLayout>
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:fontFamily="@font/linottebold"
+          android:id="@+id/account_item_detailbtn"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginBottom="10dp"
+          android:background="@drawable/round_btn"
+          android:elevation="10dp"
+          android:text="Xem chi tiết >"
+          android:textColor="@color/med_grey" />
+  </LinearLayout>
+</androidx.cardview.widget.CardView>

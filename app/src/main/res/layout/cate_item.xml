@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cate_item_bg"
+    android:elevation="10dp"
+    android:layout_width="250dp"
+    android:background="@drawable/cate_button"
+    android:layout_height="150dp"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/cate_item_txt"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="22sp"
+            android:text="Education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/cate_item_txt"
+            android:id="@+id/cate_item_img"
+            android:src="@drawable/mentalbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</FrameLayout>

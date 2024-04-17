@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg6"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.LibrarianCardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:padding="20dp"
+            android:backgroundTint="@color/pas_cream"
+            android:background="@drawable/round_bottom"
+            android:id="@+id/fraglibbook_titletxt"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="25sp"
+            android:text="Quản lý thẻ thư viện "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TableLayout
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow android:gravity="center">
+                <LinearLayout
+                    android:backgroundTint="@color/pas_blue"
+                    android:elevation="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/round_btn"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:id="@+id/fraglibcard_layoutviewcard"
+                    android:orientation="vertical"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/libviewcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:fontFamily="@font/linottebold"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"
+                        android:text="Xem thẻ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow android:gravity="center">
+                <LinearLayout
+                    android:backgroundTint="@color/pas_pink"
+                    android:elevation="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/round_btn"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:id="@+id/fraglibcard_layoutconcard"
+                    android:orientation="vertical"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/libcardconfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:fontFamily="@font/linottebold"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"
+                        android:text="Xác nhận thẻ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </TableRow>
+
+
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

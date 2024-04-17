@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <TextView
+      android:padding="10dp"
+      android:id="@+id/alert_popup_title"
+      android:background="@color/pas_orange"
+      android:fontFamily="@font/linottebold"
+      android:textSize="25sp"
+      app:layout_constraintTop_toTopOf="parent"
+      android:text="ĐỒNG Ý XÉT DUYỆT"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:elevation="10dp"
+      android:backgroundTint="@color/pas_cream"
+      android:background="@drawable/round_bottom"
+      app:layout_constraintTop_toBottomOf="@id/alert_popup_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+  <LinearLayout
+      app:layout_constraintTop_toTopOf="parent"
+      android:id="@+id/alert_popup_maincontent"
+      android:orientation="horizontal"
+      android:gravity="center_vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+  <ImageView
+      android:layout_margin="20dp"
+      android:id="@+id/alert_popup_img"
+      android:src="@drawable/kitty"
+      android:layout_width="64dp"
+      android:layout_height="64dp"/>
+  <TextView
+      android:id="@+id/alert_popup_maintxt"
+      android:padding="20dp"
+      android:fontFamily="@font/linotteregular"
+      android:textSize="20sp"
+      android:text="Bạn đồng ý xét duyệt yêu cầu tạo thẻ thư viện này không"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+  </LinearLayout>
+  <LinearLayout
+      android:padding="10dp"
+      android:id="@+id/alert_popup_allbtn"
+      android:orientation="horizontal"
+      android:gravity="center_vertical|right"
+      app:layout_constraintTop_toBottomOf="@id/alert_popup_maincontent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/alert_popup_igbtn"
+        android:background="@color/pas_redbrown"
+        android:text="Hủy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/alert_popup_accbtn"
+        android:background="@color/pas_yellow"
+        android:layout_margin="10dp"
+        android:text="Đồng ý"
+        android:src="@drawable/kitty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+  </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

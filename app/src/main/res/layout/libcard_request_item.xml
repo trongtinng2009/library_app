@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    android:orientation="horizontal"
+    android:id="@+id/libcard_request_layout"
+    android:backgroundTint="@color/pas_pinkpur"
+    android:gravity="center"
+    android:background="@drawable/round_profile"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/libcard_request_libcardimg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/neekoavt" />
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/libcard_request_libcardname"
+            android:fontFamily="@font/linottebold"
+            android:textSize="22sp"
+            android:text="Seraphine Sera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/libcard_request_libcarddate"
+            android:fontFamily="@font/linotteregular"
+            android:text="Đã gửi yêu cầu vào : 20/09/2023"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/libcard_request_libcardaccbtn"
+            android:fontFamily="@font/linottebold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Chấp nhận"
+            android:backgroundTint="@color/pas_green"
+            android:background="@drawable/round_profile"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/libcard_request_libcardigbtn"
+            android:fontFamily="@font/linottebold"
+            android:layout_marginBottom="10dp"
+            android:text="Hủy"
+            android:backgroundTint="@color/pas_purple"
+            android:background="@drawable/round_profile"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

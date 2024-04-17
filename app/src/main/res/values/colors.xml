@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="high_blue">#6096B4</color>
+    <color name="medium_blue">#93BFCF</color>
+    <color name="low_blue">#BDCDD6</color>
+    <color name="high_pink">#FBA1B7</color>
+    <color name="pas_purple">#D8B4F8</color>
+    <color name="pas_yellow">#FBF0B2</color>
+    <color name="transparent">#00000000</color>
+    <color name="pas_blue">#B9F3FC</color>
+    <color name="pas_pink">#FDCEDF</color>
+    <color name="low_pink">#F8E8EE</color>
+
+    <color name="pas_redbrown">#E4D0D0</color>
+    <color name="pas_pinkpur">#F7DBF0</color>
+    <color name="pas_lowbrown">#F5EBEB</color>
+    <color name="pas_medbrown">#E4D0D0</color>
+    <color name="pas_lowcream">#EADBC8</color>
+    <color name="pas_medcream">#DAC0A3</color>
+    <color name="pas_cream">#F8F0E5</color>
+    <color name="low_grey">#B4B4B3</color>
+    <color name="med_grey">#7D7C7C</color>
+    <color name="pas_green">#A7D397</color>
+    <color name="pas_orange">#FFCF96</color>
+    <color name="pas_red">#FF8989</color>
+
+
+
+</resources>

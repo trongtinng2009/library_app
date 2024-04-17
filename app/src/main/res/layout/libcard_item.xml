@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:elevation="10dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+  <LinearLayout
+      android:background="@color/pas_yellow"
+      android:padding="15dp"
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/libcard_img"
+          android:layout_width="80dp"
+          android:layout_height="match_parent"
+          android:scaleType="centerCrop"
+          android:src="@drawable/neekoavt" />
+      <LinearLayout
+          android:layout_marginLeft="10dp"
+          android:orientation="vertical"
+          android:layout_width="160dp"
+          android:layout_height="wrap_content">
+          <TextView
+              android:id="@+id/libcard_name"
+              android:fontFamily="@font/linottebold"
+              android:textSize="22sp"
+              android:text="Seraphine Sera"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:layout_marginTop="5dp"
+              android:id="@+id/libcard_id"
+              android:fontFamily="@font/linotteregular"
+              android:text="ID : LIB1222"
+              android:textSize="15sp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:layout_marginTop="5dp"
+              android:id="@+id/libcard_adddate"
+              android:fontFamily="@font/linotteregular"
+              android:text="Đã duyệt vào : 20/09/2023"
+              android:textSize="15sp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+      </LinearLayout>
+      <LinearLayout
+          android:paddingRight="10dp"
+          android:layout_marginLeft="10dp"
+          android:orientation="vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/libcard_viewbtn"
+              android:fontFamily="@font/linottebold"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              android:text="Xem"
+              android:backgroundTint="@color/pas_green"
+              android:background="@drawable/round_profile"
+              android:layout_height="match_parent"
+              android:layout_width="wrap_content"/>
+
+      </LinearLayout>
+  </LinearLayout>
+</androidx.cardview.widget.CardView>

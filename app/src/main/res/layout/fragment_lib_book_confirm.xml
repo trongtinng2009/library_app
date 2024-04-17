@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg6"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.LibBookConfirmFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:scaleType="centerCrop"
+                android:layout_margin="20dp"
+                android:background="@color/transparent"
+                android:id="@+id/fraglibconbook_backbtn"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/arrow_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"/>
+            <TextView
+
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/fraglibconbook_title"
+                app:layout_constraintLeft_toRightOf="@id/fraglibconbook_backbtn"
+                app:layout_constraintTop_toTopOf="@id/fraglibconbook_backbtn"
+                app:layout_constraintBottom_toBottomOf="@id/fraglibconbook_backbtn"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="25sp"
+                android:text="Request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/fraglibconbook_searchview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/edittext_round"
+                android:elevation="5dp"
+                android:padding="5dp"
+                app:iconifiedByDefault="false"
+                app:layout_constraintTop_toBottomOf="@id/fraglibconbook_title"
+                app:queryBackground="@color/transparent"
+                app:queryHint="Tìm kiếm" />
+            <LinearLayout
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/fraglibconbook_searchview"
+                android:id="@+id/fraglibconbook_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/fraglibconbook_sortbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/arrow_down" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Sort by date"
+                    android:textSize="13sp"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/linottebold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/fraglibconbook_total"
+                app:layout_constraintTop_toBottomOf="@id/fraglibconbook_sort"
+                android:text="Tổng: "
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingBottom="220dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/fraglibconbook_total"
+                android:id="@+id/fraglibconbook_rcvlistrequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

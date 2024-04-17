@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "826185518694",
+    "project_id": "library-app-aceca",
+    "storage_bucket": "library-app-aceca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826185518694:android:3616a1242283cf3a88e7a7",
+        "android_client_info": {
+          "package_name": "com.example.libraryapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMYK8pmQKm1clCQ354a65TC4qM_mCJ9CU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

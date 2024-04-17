@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.makeramen.roundedimageview.RoundedImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:elevation="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slide_event"
+    android:adjustViewBounds="true"
+    android:layout_height="match_parent"
+    android:src="@drawable/sera1"
+    android:scaleType="centerCrop"
+    app:riv_corner_radius="25dp">
+</com.makeramen.roundedimageview.RoundedImageView>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg5"
+    tools:context=".Fragment.GuestSendFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragguestsend_notlogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/fragguestlib_imagewarning"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/booklibwarning"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg2"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/linottebold"
+                android:text="Bạn chưa đăng nhập tài khoản"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linotteregular"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Bạn hãy đăng nhập hoặc đăng ký tài khoản để dùng
+chức năng này nhé !"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/round_borrowbtn_in_detailbook"
+                    android:backgroundTint="@color/pas_pink"
+                    android:fontFamily="@font/linottebold"
+                    android:text="Đăng nhập" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/round_heartbtn_in_detailbook"
+                    android:backgroundTint="@color/pas_purple"
+                    android:fontFamily="@font/linottebold"
+                    android:text="Đăng ký" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="109dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragguestsend_haveacc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/fragguestcate_backbtn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="20dp"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fragguestcate_titletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="THÔNG BÁO"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/fragguestcate_backbtn"
+            app:layout_constraintLeft_toRightOf="@id/fragguestcate_backbtn"
+            app:layout_constraintTop_toTopOf="@id/fragguestcate_backbtn" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/fragguestsend_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/edittext_round"
+            android:elevation="5dp"
+            android:padding="5dp"
+            app:iconifiedByDefault="false"
+            app:layout_constraintTop_toBottomOf="@id/fragguestcate_titletxt"
+            app:queryBackground="@color/transparent"
+            app:queryHint="Tìm kiếm" />
+
+        <LinearLayout
+            android:id="@+id/fragguestcate_searchoption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragguestsend_searchview">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragguestsend_searchname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_profile"
+                android:backgroundTint="@color/pas_redbrown"
+                android:fontFamily="@font/linottebold"
+                android:text="Tìm kiếm theo tên" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragguestsend_searchid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_profile"
+                android:backgroundTint="@color/pas_cream"
+                android:fontFamily="@font/linottebold"
+                android:text="Tìm kiếm theo ID" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fraglibconbook_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragguestcate_searchoption">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/fraglibconbook_sortbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/arrow_down" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Sort by date"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragguestsend_delall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/pas_red"
+                android:text="Xóa tất cả" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragguestsend_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@id/fragguestsend_delall"
+                android:background="@color/pas_green"
+                android:text="Xóa" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fragguestsend_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/linottebold"
+            android:text="Tổng: "
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fraglibconbook_sort" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragguestsend_rcv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="400dp"
+            app:layout_constraintTop_toBottomOf="@id/fragguestsend_total" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

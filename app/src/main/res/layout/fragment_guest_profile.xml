@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.GuestProfileFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fragguestprofile_avt"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/avt"
+                app:civ_border_width="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/fragguestprofile_username"
+                android:fontFamily="@font/boris"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Hello Sera !"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toLeftOf="@id/fragguestprofile_avt"
+                app:layout_constraintRight_toRightOf="@id/fragguestprofile_avt"
+                app:layout_constraintTop_toBottomOf="@id/fragguestprofile_avt" />
+
+            <FrameLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/fragguestprofile_username"
+                android:layout_height="530dp"
+                android:background="@drawable/round_profilechoice"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <RelativeLayout
+                    android:id="@+id/fragguesthome_nothaveaccountlayout"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/fragguesthome_nothaveaccimg"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/book"/>
+                    <TextView
+                        android:id="@+id/fragguesthome_nothaveacctxt"
+                        android:gravity="center"
+                        android:fontFamily="@font/linottebold"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Bạn hãy đăng nhập tài khoản để dùng app nhé"
+                        android:layout_below="@id/fragguesthome_nothaveaccimg"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"/>
+                    <LinearLayout
+                        android:layout_marginTop="26dp"
+                        android:orientation="vertical"
+                        android:layout_below="@id/fragguesthome_nothaveacctxt"
+                        android:layout_alignRight="@id/fragguesthome_nothaveacctxt"
+                        android:layout_alignLeft="@id/fragguesthome_nothaveacctxt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                    <EditText
+                        android:fontFamily="@font/linotteregular"
+                        android:elevation="5dp"
+                        android:hint="Username"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/person"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/loginsigngup_roundedt"
+                        android:id="@+id/fragguestprofile_loginname"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+                    <EditText
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/linotteregular"
+                        android:layout_marginBottom="20dp"
+                        android:elevation="5dp"
+                        android:drawablePadding="10dp"
+                        android:hint="Password"
+                        android:paddingLeft="10dp"
+                        android:drawableLeft="@drawable/lock"
+                        android:background="@drawable/loginsigngup_roundedt"
+                        android:id="@+id/fragguestprofile_loginpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+                        <Button
+                            android:id="@+id/fragguesthome_loginbtn"
+                            android:fontFamily="@font/poppinsbold"
+                            android:text="Đăng nhập"
+                            android:backgroundTint="@color/pas_medcream"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"/>
+                        <TextView
+                            android:id="@+id/fragguestprofile_signuptext"
+                            android:padding="5dp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:layout_marginTop="10dp"
+                            android:textSize="12sp"
+                            android:text="Nhấn vào đây để đăng ký nhé !"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/fragguesthome_haveaccountlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TableRow
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/profilebtn"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+
+                                    android:adjustViewBounds="true"
+                                    android:background="@color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/user" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/linottebold"
+                                    android:text="Your info"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/fragguestprofile_favbtn"
+                                android:clickable="true"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/profilebtn"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+
+                                    android:adjustViewBounds="true"
+                                    android:background="@color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/heart" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/linottebold"
+                                    android:text="Favorites"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/profilebtn"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+
+                                    android:adjustViewBounds="true"
+                                    android:background="@color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/policy" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/linottebold"
+                                    android:text="Our policy"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/profilebtn"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+
+                                    android:adjustViewBounds="true"
+                                    android:background="@color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/settings" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/linottebold"
+                                    android:text="Settings"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/profilebtn"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+
+                                    android:adjustViewBounds="true"
+                                    android:background="@color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/help" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/linottebold"
+                                    android:text="Help"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/profilebtn"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:layout_gravity="center"
+
+                                    android:adjustViewBounds="true"
+                                    android:background="@color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/donate" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/linottebold"
+                                    android:text="Donate"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </TableRow>
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/facebook" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/instagram" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/tiktok" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/boris"
+                            android:text="Our social media"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/fragguestprofile_logout"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="20dp"
+                        android:backgroundTint="@color/high_blue"
+                        android:text="Log out"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="30dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

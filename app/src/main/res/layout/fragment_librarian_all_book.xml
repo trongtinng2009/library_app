@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg6"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.LibrarianAllBookFragment">
+
+    <ImageButton
+        android:scaleType="centerCrop"
+        android:layout_margin="20dp"
+        android:background="@color/transparent"
+        android:id="@+id/fragguestallbook_backbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/close"
+        android:layout_width="36dp"
+        android:layout_height="36dp"/>
+    <TextView
+
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/fragguestcate_titletxt"
+        app:layout_constraintLeft_toRightOf="@id/fragguestallbook_backbtn"
+        app:layout_constraintTop_toTopOf="@id/fragguestallbook_backbtn"
+        app:layout_constraintBottom_toBottomOf="@id/fragguestallbook_backbtn"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="25sp"
+        android:text="TẤT CẢ SÁCH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/fragliballbook_searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_round"
+        android:elevation="5dp"
+        android:padding="5dp"
+        app:iconifiedByDefault="false"
+        app:layout_constraintTop_toBottomOf="@id/fragguestcate_titletxt"
+        app:queryBackground="@color/transparent"
+        app:queryHint="Tìm kiếm" />
+    <LinearLayout
+        android:id="@+id/fragguestcate_searchoption"
+        app:layout_constraintTop_toBottomOf="@id/fragliballbook_searchview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragliballbook_searchname"
+            android:fontFamily="@font/linottebold"
+            android:backgroundTint="@color/pas_redbrown"
+            android:layout_margin="20dp"
+            android:background="@drawable/round_profile"
+            android:text="Tìm kiếm theo tên"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragliballbook_searchid"
+            android:fontFamily="@font/linottebold"
+            android:backgroundTint="@color/pas_cream"
+            android:layout_margin="20dp"
+            android:background="@drawable/round_profile"
+            android:text="Tìm kiếm theo id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragliballbook_searchauthor"
+            android:fontFamily="@font/linottebold"
+            android:backgroundTint="@color/pas_cream"
+            android:layout_margin="20dp"
+            android:background="@drawable/round_profile"
+            android:text="Tìm kiếm theo tác giả"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:fontFamily="@font/linottebold"
+        android:textSize="17sp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/fragliballbook_total"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragguestcate_searchoption"
+        android:text="Tổng: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@id/fragliballbook_total"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/fraglibconbook_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/fraglibconbook_sortbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/arrow_down" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Sort by date"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/filter_24px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingBottom="350dp"
+        app:layout_constraintTop_toBottomOf="@id/fraglibconbook_sort"
+        android:id="@+id/fragliballbook_rcv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

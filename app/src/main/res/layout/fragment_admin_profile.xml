@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profilebg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.AdminProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="32dp" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fragadminprofile_avt"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/avt"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/pas_medbrown"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline" />
+
+        <TextView
+            android:id="@+id/fragadminprofile_username"
+            android:fontFamily="@font/boris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Hello Admin !"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="@id/fragadminprofile_avt"
+            app:layout_constraintRight_toRightOf="@id/fragadminprofile_avt"
+            app:layout_constraintTop_toBottomOf="@id/fragadminprofile_avt" />
+        <FrameLayout
+            android:paddingBottom="150dp"
+            android:elevation="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_profilechoice"
+            app:layout_constraintTop_toBottomOf="@id/fragadminprofile_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/admin_insurance"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:backgroundTint="#EAC7C7"
+                    android:background="@drawable/round_btn"
+                    android:text="Add your policy"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/admin_event"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:backgroundTint="#EAC7C7"
+                    android:background="@drawable/round_btn"
+                    android:text="Add events"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/admin_user"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#EAC7C7"
+                    android:background="@drawable/round_btn"
+                    android:text="Edit your account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:background="@drawable/loginsigngup_roundedt"
+                        android:layout_marginLeft="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/fragadminprofile_guestquantity"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/person"
+                            android:layout_width="35dp"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:fontFamily="@font/poppinsregular"
+                            android:textSize="16sp"
+                            android:text="Guest : 6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="@drawable/loginsigngup_roundedt"
+                        android:padding="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:id="@+id/fragadminprofile_staffquantity"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/badge"
+                            android:layout_width="35dp"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:fontFamily="@font/poppinsregular"
+                            android:textSize="16sp"
+                            android:text="Staff : 0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <View
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/selected_underline"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/fragadminprofile_logout"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#EAC7C7"
+                    android:background="@drawable/loginsigngup_roundedt"
+                    android:text="Log out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

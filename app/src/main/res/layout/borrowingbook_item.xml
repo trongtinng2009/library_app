@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="20dp"
+    android:backgroundTint="@color/pas_redbrown"
+    android:elevation="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:layout_margin="10dp"
+        android:layout_weight="3.5"
+        android:id="@+id/borrowingbook_img"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/seraavt2" />
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_weight="6.5"
+        android:id="@+id/borrowingbook_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+          <LinearLayout
+              android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/borrowingbook_txtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/linottebold"
+                android:text="THÁM TỬ CONAN"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/borrowingbook_txtborrowdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your borrow date: 27/10/2023" />
+          </LinearLayout>
+            <ImageButton
+                android:id="@+id/borrowingbook_removebtn"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:background="@color/transparent"
+                android:src="@drawable/cancel_32px"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RatingBar
+                android:rating="4"
+                android:layout_centerVertical="true"
+                android:id="@+id/borrowingbook_ratingbar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:visibility="gone"
+                android:fontFamily="@font/linottebold"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:textSize="13sp"
+                android:backgroundTint="@color/pas_pink"
+                android:background="@drawable/round_righttop_leftbot"
+                android:id="@+id/borrowingbook_leftday"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/borrowingbook_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Only 2 days left " />
+            <TextView
+                android:visibility="gone"
+                android:fontFamily="@font/linottebold"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:textSize="13sp"
+                android:backgroundTint="@color/pas_orange"
+                android:background="@drawable/round_righttop_leftbot"
+                android:id="@+id/borrowingbook_waiting"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/borrowingbook_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requesting" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:fontFamily="@font/linottebold"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:textSize="13sp"
+                android:backgroundTint="@color/pas_red"
+                android:background="@drawable/round_righttop_leftbot"
+                android:id="@+id/borrowingbook_due"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/borrowingbook_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXPIRED" />
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
